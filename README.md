@@ -37,7 +37,7 @@ No diretório do projeto:
 
 ```
 make all
-./minefield
+./minesweeper
 ```
 
 Pedirá alguns parâmetros para o jogo, como quantidade de bombas, linhas e colunas, é só preencher e apertar enter.
