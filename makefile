@@ -1,5 +1,5 @@
 # Name of the project
-PROJECT_NAME=minefield
+PROJECT_NAME=minesweeper
 
 # .cpp Files
 CPP_SOURCE=$(wildcard ./source/*.cpp)
