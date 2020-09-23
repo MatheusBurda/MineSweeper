@@ -42,10 +42,10 @@ make all
 
 Pedirá alguns parâmetros para o jogo, como quantidade de bombas, linhas e colunas, é só preencher e apertar enter.
 
-## Authors
+## Autor
 
-* **[Matheus Burda](https://github.com/MatheusBurda)** - *start to end* 
+* **[Matheus Burda](https://github.com/MatheusBurda)** - *começo ao fim* 
 
-## License
+## Licença
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
