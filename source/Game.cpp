@@ -217,126 +217,72 @@ void Game::zeroWave(int i, int j){
     if(matrixOfTiles[i][j].getOpen())
         return;
     matrixOfTiles[i][j].setOpen(true);
-    if(i>0 && i<(nLines-1)){
-        if(j>0 && j < (nColumns-1)){
-            if(!matrixOfTiles[i-1][j].getBombsAround()){
+    if(matrixOfTiles[i][j].getBombsAround() == 0){
+        if(i>0 && i<(nLines-1)){
+            if(j>0 && j < (nColumns-1)){
                 zeroWave(i-1,j);
-                matrixOfTiles[i-1][j].setOpen(true);
-            }
-            if(!matrixOfTiles[i][j-1].getBombsAround()){
                 zeroWave(i,j-1);
-                matrixOfTiles[i][j-1].setOpen(true);
-            }
-            if(!matrixOfTiles[i][j+1].getBombsAround()){
                 zeroWave(i,j+1);
-                matrixOfTiles[i][j+1].setOpen(true);
-            }
-            if(!matrixOfTiles[i+1][j].getBombsAround()){
                 zeroWave(i+1,j);
-                matrixOfTiles[i+1][j].setOpen(true);
-            }
-        }
-        else if(j == (nColumns-1) ){
-            if(!matrixOfTiles[i-1][j].getBombsAround()){
-                zeroWave(i-1,j);
-                matrixOfTiles[i-1][j].setOpen(true);
-            }
-            if(!matrixOfTiles[i][j-1].getBombsAround()){
-                zeroWave(i,j-1);
-                matrixOfTiles[i][j-1].setOpen(true);
-            }
-            if(!matrixOfTiles[i+1][j].getBombsAround()){
-                matrixOfTiles[i+1][j].setOpen(true);
-                zeroWave(i+1,j);
-            }
+                zeroWave(i-1,j-1);
+                zeroWave(i+1,j-1);
+                zeroWave(i+1,j+1);
+                zeroWave(i-1,j+1);
 
+            }
+            else if(j == (nColumns-1) ){
+                zeroWave(i-1,j);
+                zeroWave(i,j-1);
+                zeroWave(i+1,j);
+                zeroWave(i-1,j-1);
+                zeroWave(i+1,j-1);
+            }
+            else{
+                zeroWave(i-1,j);
+                zeroWave(i,j+1);
+                zeroWave(i+1,j);
+                zeroWave(i+1,j+1);
+                zeroWave(i-1,j+1);
+            }
         }
+        /**********************************************************************/
+        else if(i == (nLines-1)){
+            if(j>0 && j<(nColumns-1)){
+                zeroWave(i-1,j);
+                zeroWave(i,j-1);
+                zeroWave(i,j+1);
+                zeroWave(i-1,j-1);
+                zeroWave(i-1,j+1);
+            }
+            else if(j == (nColumns-1)){
+                zeroWave(i-1,j);
+                zeroWave(i,j-1);
+                zeroWave(i-1,j-1);
+            }
+            else{
+                zeroWave(i-1,j);
+                zeroWave(i,j+1);
+                zeroWave(i-1,j+1);
+            }
+        }
+        /**********************************************************************/
         else{
-            if(!matrixOfTiles[i-1][j].getBombsAround()){
-                zeroWave(i-1,j);
-                matrixOfTiles[i-1][j].setOpen(true);
-            }
-            if(!matrixOfTiles[i][j+1].getBombsAround()){
-                zeroWave(i,j+1);
-                matrixOfTiles[i][j+1].setOpen(true);
-            }
-            if(!matrixOfTiles[i+1][j].getBombsAround()){
-                zeroWave(i+1,j);
-                matrixOfTiles[i+1][j].setOpen(true);
-            }
-        }
-    }
-    /**********************************************************************/
-    else if(i == (nLines-1)){
-        if(j>0 && j<(nColumns-1)){
-            if(!matrixOfTiles[i-1][j].getBombsAround()){
-                zeroWave(i-1,j);
-                matrixOfTiles[i-1][j].setOpen(true);
-            }
-            if(!matrixOfTiles[i][j-1].getBombsAround()){
+            if(j>0 && j<(nColumns-1)){
                 zeroWave(i,j-1);
-                matrixOfTiles[i][j-1].setOpen(true);
-            }
-            if(!matrixOfTiles[i][j+1].getBombsAround()){
                 zeroWave(i,j+1);
-                matrixOfTiles[i][j+1].setOpen(true);
-            }
-        }
-        else if(j == (nColumns-1)){
-            if(!matrixOfTiles[i-1][j].getBombsAround()){
-                zeroWave(i-1,j);
-                matrixOfTiles[i-1][j].setOpen(true);
-            }
-            if(!matrixOfTiles[i][j-1].getBombsAround()){
-                zeroWave(i,j-1);
-                matrixOfTiles[i][j-1].setOpen(true);
-            }
-        }
-        else{
-            if(!matrixOfTiles[i-1][j].getBombsAround()){
-                zeroWave(i-1,j);
-                matrixOfTiles[i-1][j].setOpen(true);
-            }
-            if(!matrixOfTiles[i][j+1].getBombsAround()){
-                zeroWave(i,j+1);
-                matrixOfTiles[i][j+1].setOpen(true);
-            }
-        }
-    }
-    /**********************************************************************/
-    else{
-        if(j>0 && j<(nColumns-1)){
-            if(!matrixOfTiles[i][j-1].getBombsAround()){
-                zeroWave(i,j-1);
-                matrixOfTiles[i][j-1].setOpen(true);
-            }
-            if(!matrixOfTiles[i][j+1].getBombsAround()){
-                zeroWave(i,j+1);
-                matrixOfTiles[i][j+1].setOpen(true);
-            }
-            if(!matrixOfTiles[i+1][j].getBombsAround()){
                 zeroWave(i+1,j);
-                matrixOfTiles[i+1][j].setOpen(true);
+                zeroWave(i+1,j+1);
+                zeroWave(i+1,j-1);
             }
-        }
-        else if(j == (nColumns-1)){
-            if(!matrixOfTiles[i][j-1].getBombsAround()){
+            else if(j == (nColumns-1)){
                 zeroWave(i,j-1);
-                matrixOfTiles[i][j-1].setOpen(true);
-            }
-            if(!matrixOfTiles[i+1][j].getBombsAround()){
                 zeroWave(i+1,j);
-                matrixOfTiles[i+1][j].setOpen(true);
+                zeroWave(i+1,j-1);
             }
-        }
-        else{
-            if(!matrixOfTiles[i][j+1].getBombsAround()){
+            else{
                 zeroWave(i,j+1);
-                matrixOfTiles[i][j+1].setOpen(true);
-            }
-            if(!matrixOfTiles[i+1][j].getBombsAround()){
                 zeroWave(i+1,j);
-                matrixOfTiles[i+1][j].setOpen(true);
+                zeroWave(i+1,j+1);
             }
         }
     }
@@ -351,7 +297,8 @@ void Game::handleEvents(){
     SDL_PollEvent(&event);
     switch (event.type) {
         case SDL_QUIT:
-            isRunning == false;
+            close();
+
             break;
         case SDL_MOUSEBUTTONDOWN:
             if(running()){

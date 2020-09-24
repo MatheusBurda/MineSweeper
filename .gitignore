@@ -1,2 +1,4 @@
 *.o
-minefield
+minesweeper
+
+*.png

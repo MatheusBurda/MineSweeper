@@ -8,7 +8,7 @@
 #include <ctime>
 
 
-#define SCREEN_TITLE "MINEFIELD"
+#define SCREEN_TITLE "MINESWEEPER"
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 

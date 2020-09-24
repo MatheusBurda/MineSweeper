@@ -1,8 +1,9 @@
 # Minesweeper
 
-Jogo do campo minado feito em C++ e SDL2. Este código NÃO é um tutorial conciso com a programção orientada a objetos.
+Jogo do Campo Minado feito em C++ e SDL2. 
 
-![Campo Minado](/Extras/BallCollision.gif)
+
+![Campo Minado](./etc/minesweeper.gif)
 
 ## Começando
 
@@ -13,7 +14,7 @@ Com essas instruções você obterá uma cópia do projeto e as suas dependênci
 Ter instalado:
 
 * [Git](https://git-scm.com/downloads)*
-* [SDL2](https://lazyfoo.net/tutorials/SDL/01_hello_SDL/linux/index.php) Tutorial de como instalar a biblioteca SDL2.
+* [SDL2](https://lazyfoo.net/tutorials/SDL/01_hello_SDL/linux/index.php) - Tutorial de como instalar a biblioteca SDL2.
 * SDL2-ttf:
 ```
 sudo apt-get install libsdl2-ttf-dev
@@ -40,7 +41,9 @@ make all
 ./minesweeper
 ```
 
-Pedirá alguns parâmetros para o jogo, como quantidade de bombas, linhas e colunas, é só preencher e apertar enter.
+Pedirá alguns parâmetros para iniciar o jogo, como quantidade de bombas, linhas e colunas, é só preencher e apertar enter.
+
+Para jogar: Botão esquerdo do mouse: 
 
 ## Autor
 
