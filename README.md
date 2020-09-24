@@ -43,7 +43,14 @@ make all
 
 Pedirá alguns parâmetros para iniciar o jogo, como quantidade de bombas, linhas e colunas, é só preencher e apertar enter.
 
-Para jogar: Botão esquerdo do mouse: 
+## Jogando: 
+
+* Botão esquerdo do mouse: Abre um quadrado.
+* Botão direito do mouse: Coloca uma flag. 
+* Você deve colocar uma flag em todas as bombas para ganhar.
+* Se abrir uma bomba você perde o jogo.
+* Ao acabar, clicar em qualquer posição da tela inicia um novo jogo. 
+
 
 ## Autor
 
